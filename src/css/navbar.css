@@ -1,0 +1,216 @@
+
+
+.navbarMain{
+    /* border: 1px solid black; */
+    position: relative;
+    padding-top: 10px;
+    height: 47vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbarMain .navbar{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 10;
+    padding-top: 10px;
+    width: 100%;
+
+}
+
+
+
+.navbar .logo, .navbar .menu{
+    height: 40px;
+    width: 40px;
+    background-color: #1D1B20;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img, .menu img{
+    width: 50%;
+    aspect-ratio: 2/2;
+}
+
+.navbar .searchBar{
+    height: 40px;
+    /* border: 1px solid black; */
+    width: 60%;
+    background-color: #1D1B20;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 0 10px;
+    gap: 5px;
+}
+
+.searchBar input, .searchBar .ser{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    /* height: 100%; */
+    color: #FEF0C7;
+    font-size: 12px;
+    /* border: 1px solid white; */
+    font-family: "Oxygen", sans-serif;
+}
+
+@media (max-width: 375px) {
+    .searchBar input, .searchBar .ser{
+        font-size: 10px;
+    }
+}
+
+.mit{
+    /* border: 1px solid black; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    justify-content: center;
+}
+
+.menuItems{
+    /* border: 1px solid black; */
+    /* background-color: gray; */
+    background: linear-gradient(115deg, #FDB022, #FFCD71);
+    overflow: hidden;
+    aspect-ratio: 2/2;
+    width: 150%;
+    border-radius: 50%;
+    position: absolute;
+    top: -220%;
+}
+
+.mis{
+    /* border: 1px solid black; */
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: calc(100% - 00px);
+    width: 100%;
+    justify-content: space-around;
+}
+
+.mis .mi{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    /* border: 2px solid white; */
+    color: white;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+}
+
+.mi p{
+    position: absolute;
+    bottom: -18px;
+    font-weight: 500;
+    color: #333232;
+    font-size: 0.8rem;
+    font-family: "Oxygen", sans-serif;
+}
+
+.mi img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.mis .left
+{
+    transform: translate(-115px, 40px);
+}
+
+.mis .center
+{
+    transform: translate(0px, 70px);
+}
+
+.mis .right
+{
+    transform: translate(115px, 40px);
+}
+
+
+.navbar .searchRes {
+    position: fixed;
+    pointer-events: auto; /* Enable interaction with this element */
+    top: 0px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    justify-content: flex-start;
+    /* border: 1px solid black; */
+    width: 100%;
+    /* height: calc(100vh - 60px); */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: #ffffff72;
+    z-index: 9999; /* Ensure it stays on top */
+}
+
+.searchRes .searchBar{
+    height: 40px;
+    /* border: 1px solid black; */
+    width: 85%;
+    background-color: #1D1B20;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 10px 10px;
+    gap: 5px;
+    
+}
+
+.backSearch{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; 
+    width: 100%;   
+}
+
+.backBtn{
+    /* position: absolute; */
+    width: 40px;
+    aspect-ratio: 2/2;
+}
+
+.searchRes .npf{
+    color: #1D1B20;
+    font-weight: 500;
+}
+
+@media (min-width: 321px) and (max-width: 425px) {
+    .mit{
+        margin-top: -20px;
+    }
+}
+@media (min-width: 425px) and (max-width: 767px) {
+    .mit{
+        margin-top: -20px;
+    }
+}

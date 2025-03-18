@@ -1,0 +1,235 @@
+
+.fd {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transform: translateY(100%);
+    opacity: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   padding: 15px;
+}
+
+.fd.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fdMain{
+    height: 100vh;
+    border-radius: 0;
+    background: rgb(3 3 3 / 90%);
+}
+
+.fd-content {
+    text-align: center;
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: self-start;
+    overflow-y: scroll;
+    padding-bottom: 30px;
+
+    /* Hide scrollbar for Webkit (Chrome, Safari) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Edge, IE */
+}
+
+.fd-content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.fd-close {
+    position: absolute;
+    top: -70px;
+    /* right: 15px; */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above content */
+    border: 2px solid #717680;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #717680;
+}
+
+.fd-content{
+    /* border: 1px solid black; */
+    border-radius: 20px 20px 0 0;
+}
+
+.fd-content .foodCategory{
+    margin-top: 10px;
+}
+
+.fd-content .foodImg {
+    position: relative;
+}
+
+.foodImg .shareBtn{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    font-family: "Oxygen", sans-serif;
+    /* border: 1px solid black; */
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.401));
+}
+
+.shareBtn img{
+    width: 100%;
+    height: 100%;
+}
+
+.shareBtn p{
+    color: #333232;
+    font-weight: 500;
+    font-size: 0.6rem;
+    margin-top: -10px;
+}
+
+.fd-content .foodImg img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.fdCat{
+    margin-top: 15px;
+}
+
+.fd-content h1{
+    text-align: start;
+    color: #333232;
+    line-height: 38px;
+    margin-top: 10px;
+    font-family: "Albert Sans", sans-serif;
+}
+
+.fdCats {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.fd-content .fdCats button{
+    border: 1px solid #D5D7DA;
+    padding: 5px 7px;
+    border-radius: 7px;
+    color: #333232;
+    background-color: white;
+    font-size: 0.7rem;
+    font-family: "Oxygen", sans-serif;
+}
+
+.fd-content .ddHead{
+    color: #333232;
+    font-size: 20px;
+    font-family: "Albert Sans", sans-serif;
+}
+
+.fd-content .fdDetails{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+
+.fdDetails {
+    opacity: 0;
+    transform: translateY(50px); /* Move down initially */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fdDetails.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fdd {
+    background-color: #333232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    min-width: 15%;
+    border-radius: 100px;
+    overflow: hidden;
+    height: 0;
+}
+
+.fdDetails.active .fdd {
+    height: auto;
+    animation: expandHeight 0.5s ease-in-out forwards;
+}
+
+@keyframes expandHeight {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+
+
+.fdd .fddImg{
+    /* border: 1px solid black; */
+    width: 100%;
+    aspect-ratio: 2/2 ;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #FDB022, #FFCD71);
+}
+
+.fdd .fddNut{
+    margin-bottom: 30%;
+}
+
+.fdd .fddNum{
+    font-size: 1rem; 
+    /* border: 1px solid black; */
+    width: 42px;
+    font-family: "Albert Sans", sans-serif;
+}
+
+.fdd .fddUnit{
+    font-size: 0.6rem;
+    font-family: "Oxygen", sans-serif;
+}
+
+.fdd p {
+    background: linear-gradient(45deg, #FDB022, #FFCD71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  
+   .ddDesc{
+    text-align: start;
+    margin-top: 15px;
+    font-size: 14px;
+    font-size: 0.9rem;
+    color: #333232;
+    font-family: "Oxygen", sans-serif;
+  }

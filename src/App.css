@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.backMenu{
+  /* border: 1px solid black; */
+  background: linear-gradient(235deg, #FDB022, #FFCD71);
+  position: relative;
+}
+
+.backMenu .bm{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.bm button{
+  border: none;
+  height: 40px;
+  aspect-ratio: 2/2;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.bm button img{
+  width: 80%;
+  aspect-ratio: 2/2;
+}
+
+.bm .menuOpts{
+  /* border: 1px solid black; */
+  /* line-height: 30px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 50px;
+}
+
+.menuOpts p{
+  font-size: 1.8rem;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.allComponents{
+  /* border: 1px solid black; */
+  height: 100vh;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+
+  border-radius: 0;
+}
+
+
+.openMenu{
+  transform: translateX(-70%) scale(0.9);
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 5px 0px 15px 0 #FDB022;
+}
+
+.desktop-message {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin-top: 50px;
+  padding: 20px;
+}

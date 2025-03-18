@@ -1,0 +1,24 @@
+
+
+.menuMain{
+    /* border: 1px solid black; */
+    margin-top: 60px;
+    min-height: 100vh;
+}
+
+.menuMain .topBar{
+    /* border: 1px solid black; */
+    width: 90%;
+    margin: auto;
+}
+
+.topBar p{
+    color: #717680;
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: "Albert Sans", sans-serif;
+}
+
+.topBar span{
+    color: #414651;
+}

@@ -1,0 +1,172 @@
+.foodNav {
+    display: flex;
+        align-items: center;
+        width: 90%;
+        margin: 20px auto;
+        margin-top: 25px;
+        overflow-x: auto;
+        gap: 10px;
+        /* padding: 10px; */
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.foodNav::-webkit-scrollbar {
+    display: none;
+}
+
+.foodNav button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border: none;
+    background-color: white;
+    border: 1px solid #D5D7DA;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out;
+    font-family: "Oxygen", sans-serif;
+}
+
+/* Active button styling */
+.foodNav button.active {
+    background: #333232;
+    color: white;
+    font-weight: 500;
+}
+
+/* Food List Container */
+.foodList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Food Card */
+.foodCard {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    overflow: hidden;
+    height: 140px;
+}
+
+/* Food Image */
+.foodCard img {
+    width: 45%;
+    /* aspect-ratio: 2/2; */
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Food Details */
+.foodDetails {
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 100%;
+    color: #333232;
+}
+
+.foodDetails h3{
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Oxygen", sans-serif;
+}
+
+.foodDetails .pv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.foodCategory {
+    color: red;
+    font-size: 10px;
+    font-weight: 700;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    font-family: "Oxygen", sans-serif;
+}
+
+.foodPrice {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Oxygen", sans-serif;
+}
+
+.viewButton {
+    padding: 5px 10px;
+    border: none;
+    background: transparent;
+    border: 1px solid gray;
+    color: #333232;
+    border-radius: 40px;
+    cursor: pointer;
+    /* margin-top: 10px; */
+    font-size: 0.6rem;
+    font-family: "Oxygen", sans-serif;
+}
+
+.fl{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.foodGroup .groupTitle{
+    width: 90%;
+    margin: auto;
+    color: #333232;
+    font-family: "Albert Sans", sans-serif;
+}
+
+.foodSearch{
+    border: 1px solid #D5D7DA;
+    height: 60px;
+    padding: 5px;
+    margin-bottom: 0;
+    width: 90vw;
+    overflow: visible;
+}
+
+.foodSearch img{
+    border-radius: 5px;
+    width: 50px;
+}
+
+.foodSearch .foodDetails{
+    padding: 0 10px;
+    justify-content: center;
+}
+
+.foodSearch span, .foodSearch h3{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.foodSearch .pv{
+    margin-right: 15px;
+}
+
+@media (min-width: 425px) and (max-width: 769px) {
+    .foodCard{
+        height: 190px;
+    }
+}
