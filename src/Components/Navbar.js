@@ -1,4 +1,4 @@
-    import React, { useState } from 'react'
+    import React, { useState, useRef  } from 'react'
     import '../css/navbar.css'
     import bar from '../Images/bar.svg'
     import food from '../Images/food.svg'
@@ -19,10 +19,18 @@ import foodItems from "../data/foodData";
         
         const [searchQuery, setSearchQuery] = useState('');
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const searchInputRef = useRef(null);
 
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
         setIsSearchOpen(true);
+    };
+
+    const handleSearchClick = () => {
+        setIsSearchOpen(true);
+        setTimeout(() => {
+            searchInputRef.current?.focus(); // Ensure focus after state update
+        }, 0);
     };
 
     const filteredItems = searchQuery && foodItems.filter((item) =>
@@ -36,7 +44,7 @@ import foodItems from "../data/foodData";
                 <img src={logo} alt="logo" />
                 </div>
                 
-                <div className="searchBar" onClick={() => setIsSearchOpen(true)}>
+                <div className="searchBar" onClick={() => {setIsSearchOpen(true); handleSearchClick()}}>
                     <img src={searchIcon} alt="search icon" />
                     <div className="ser">Looking for something special?</div>
                 </div>
@@ -51,7 +59,7 @@ import foodItems from "../data/foodData";
                         <div className="searchBar">
                     <img src={searchIcon} alt="search icon" />
                     <input type="text" placeholder='search' value={searchQuery}
-                        onChange={handleSearchChange}/>
+                        onChange={handleSearchChange} ref={searchInputRef}/>
                 </div>
                     </div>
 

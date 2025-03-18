@@ -19,8 +19,9 @@
 }
 
 .foodNav button {
+    color: #333232;
     padding: 5px 10px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     border: none;
     background-color: white;
     border: 1px solid #D5D7DA;
@@ -139,7 +140,7 @@
 
 .foodSearch{
     border: 1px solid #D5D7DA;
-    height: 60px;
+    height: 80px;
     padding: 5px;
     margin-bottom: 0;
     width: 90vw;
@@ -148,16 +149,19 @@
 
 .foodSearch img{
     border-radius: 5px;
-    width: 50px;
+    width: 70px;
 }
 
 .foodSearch .foodDetails{
     padding: 0 10px;
     justify-content: center;
+    width: 60%;
 }
 
+
+
 .foodSearch span, .foodSearch h3{
-    font-size: 10px;
+    /* font-size: 10px; */
     font-weight: 600;
 }
 
