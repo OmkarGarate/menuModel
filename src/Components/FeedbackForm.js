@@ -16,9 +16,8 @@ import blueCat from '../Images/cat.svg'
 
 function FeedbackForm({ onClose }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [currentX, setCurrentX] = useState(0);
+  const [startY, setStartY] = useState(0);
+  const [currentY, setCurrentY] = useState(0);
   const [isSwiping, setIsSwiping] = useState(false);
   const formRef = useRef(null);
   const dateInputRef = useRef(null);
@@ -35,18 +34,18 @@ function FeedbackForm({ onClose }) {
   };
 
   const handleTouchStart = (e) => {
-    setStartX(e.touches[0].clientX);
-    setCurrentX(e.touches[0].clientX);
+    setStartY(e.touches[0].clientY);
+    setCurrentY(e.touches[0].clientY);
     setIsSwiping(true);
   };
 
   const handleTouchMove = (e) => {
     if (!isSwiping) return;
-    setCurrentX(e.touches[0].clientX);
+    setCurrentY(e.touches[0].clientY);
   };
 
   const handleTouchEnd = () => {
-    if (isSwiping && startX - currentX > 50) {
+    if (isSwiping && currentY - startY > 50) {
       handleClose();
     }
     setIsSwiping(false);
