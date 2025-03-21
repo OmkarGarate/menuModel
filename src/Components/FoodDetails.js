@@ -25,6 +25,7 @@ function FoodDetails({ foodId, onClose }) {
   const sectionRef = useRef(null);
   const imgRef = useRef(null);
   const [imgHeight, setImgHeight] = useState(0);
+  const [startY, setStartY] = useState(null);
 
   useEffect(() => {
     setIsOpen(true);
@@ -75,11 +76,24 @@ function FoodDetails({ foodId, onClose }) {
     }
   };
 
+  const handleTouchStart = (e) => {
+    setStartY(e.touches[0].clientY);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!startY) return;
+    const endY = e.touches[0].clientY;
+    const diff = endY - startY;
+
+    if (diff > 50) { // Adjust threshold for swipe sensitivity
+      handleClose(); // Close FoodDetails on downward swipe
+    }
+  };
+
   const cats = [];
   cats.push(foodItem.primaryCategory);
   cats.push(foodItem.secondaryCategory);
   cats.push(...foodItem.personalPreferences);
-  console.log(cats);
 
   const categoryColors = {
     vegetarian: "green",
@@ -105,7 +119,11 @@ function FoodDetails({ foodId, onClose }) {
   const displayCategory = normalizedCategories.find(cat => priorityOrder.includes(cat)) || normalizedCategories[0] || "other";
 
   return (
-    <div className={`fd ${isOpen ? "active" : ""}`}>
+    <div 
+      className={`fd ${isOpen ? "active" : ""}`}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+    >
       <button className="fd-close" onClick={handleClose}>
         <img src={closeBtn} alt="close button" />
       </button>
