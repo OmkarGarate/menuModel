@@ -9,7 +9,7 @@ const foodItems = [
     personalPreferences: ["Non-Veg", "Bowl"],
     tag: "food",
     image: "https://via.placeholder.com/150",
-    description: "A delicious crispy chicken bowl served with fresh veggies and flavorful sauce.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "25 Mins", 
       servings: "01 Servings", 
@@ -27,7 +27,7 @@ const foodItems = [
     personalPreferences: ["Vegetarian", "Bowl", "Ramen", "Spicy"],
     tag: "food",
     image: "https://via.placeholder.com/150",
-    description: "A flavorful ramen bowl with a spicy garlic kick, packed with fresh vegetables.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "30 Mins", 
       servings: "01 Servings", 
@@ -45,7 +45,7 @@ const foodItems = [
     personalPreferences: ["Vegetarian", "Curry"],
     tag: "food",
     image: "https://via.placeholder.com/150",
-    description: "Soft paneer cubes cooked in a creamy tomato-based gravy, served with naan or rice.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "30 Mins", 
       servings: "01 Servings", 
@@ -65,7 +65,7 @@ const foodItems = [
     personalPreferences: ["Whiskey"],
     tag: "bar",
     image: "https://via.placeholder.com/150",
-    description: "Classic whiskey sour with bourbon, lemon juice, and simple syrup, topped with ice.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "5 Mins", 
       servings: "01 Servings", 
@@ -83,7 +83,7 @@ const foodItems = [
     personalPreferences: ["Tequila"],
     tag: "bar",
     image: "https://via.placeholder.com/150",
-    description: "Refreshing margarita with tequila, lime juice, and triple sec, served with a salted rim.",
+    description:"The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "5 Mins", 
       servings: "01 Servings", 
@@ -103,7 +103,7 @@ const foodItems = [
     personalPreferences: ["Rum"],
     tag: "drinks",
     image: "https://via.placeholder.com/150",
-    description: "A refreshing blend of white rum, mint, lime juice, soda, and sugar.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "5 Mins", 
       servings: "01 Servings", 
@@ -121,7 +121,7 @@ const foodItems = [
     personalPreferences: ["Juices", "Healthy"],
     tag: "drinks",
     image: "https://via.placeholder.com/150",
-    description: "Freshly squeezed orange juice, rich in vitamin C and perfect for a refreshing drink.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "2 Mins", 
       servings: "01 Servings", 
@@ -141,7 +141,7 @@ const foodItems = [
     personalPreferences: ["Non-Veg", "Pasta"],
     tag: "food",
     image: "https://via.placeholder.com/150",
-    description: "Creamy spaghetti with eggs, cheese, pancetta, and black pepper.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "20 Mins", 
       servings: "01 Servings", 
@@ -159,7 +159,7 @@ const foodItems = [
     personalPreferences: ["Vegetarian", "Pizza"],
     tag: "food",
     image: "https://via.placeholder.com/150",
-    description: "Classic pizza topped with tomato, mozzarella, and fresh basil.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "25 Mins", 
       servings: "01 Servings", 
@@ -177,7 +177,7 @@ const foodItems = [
     personalPreferences: ["Non-Veg", "Salad"],
     tag: "food",
     image: "https://via.placeholder.com/150",
-    description: "Fresh greens with grilled chicken, cherry tomatoes, and vinaigrette.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "15 Mins", 
       servings: "01 Servings", 
@@ -195,7 +195,7 @@ const foodItems = [
     personalPreferences: ["Non-Veg", "Spicy"],
     tag: "food",
     image: "https://via.placeholder.com/150",
-    description: "Spicy grilled chicken marinated with yogurt and Indian spices, cooked in a tandoor.",
+    description: "The Chilli Garlic Veg Ramen Bowl is a bold and comforting dish, featuring a rich, spicy garlic-infused broth with deep umami flavors. Loaded with fresh vegetables like bok choy, mushrooms, bell peppers, and carrots, it pairs perfectly with springy ramen noodles for a satisfying bite. The broth, made with vegetable stock, soy sauce, ginger, and chili flakes, delivers the perfect balance of heat and savoriness. Topped with crispy garlic, sesame seeds, and fresh spring onions, this bowl is a flavorful delight for spice lovers and ramen enthusiasts alike",
     nutrition: { 
       time: "35 Mins", 
       servings: "01 Servings", 

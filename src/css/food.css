@@ -180,5 +180,9 @@
     .foodCard{
         height: 190px;
     }
+
+    .foodSearch{
+        height: 80px;
+    }
 }
 
