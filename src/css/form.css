@@ -48,6 +48,7 @@
   
 .slideIn {
     transform: translateY(0);
+    
 }
   
 .slideOut {
@@ -114,6 +115,8 @@
     width: 100%;
     color: #AEAAAB;
     font-family: "Oxygen", sans-serif;
+    font-size: 1rem;
+    text-align: left;
 }
 
 .pfiIm {

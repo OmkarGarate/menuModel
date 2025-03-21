@@ -47,7 +47,7 @@ function FeedbackForm({onClose }) {
         <div className="pfTop">
           <div className="pftDesc">
             <h1>
-            How Did We Do? 🤗
+            How Did We <br /> Do? 🤗
             </h1>
             <p>Your thoughts = Our secret ingredient!</p>
           </div>
