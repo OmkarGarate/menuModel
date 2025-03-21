@@ -1,0 +1,193 @@
+.pfForm {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.23);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fbForm{
+    width: 100%;
+    height: max-content;
+    position: relative;
+}
+  
+.pfView {
+    opacity: 1;
+    display: flex;
+}
+  
+.pfFade {
+    opacity: 0;
+    display: flex; /* Keep visible for smooth fade-out */
+}
+  
+.pfMain {
+    width: 90%;
+    min-height: 85%;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #D5D7DA;
+    background-color: #FFFFFF;
+    transform: translateY(100vh);
+    transition: transform 0.3s ease-in-out;
+}
+
+.fbMain{
+    transform: translate(0);
+    width: 95%;
+    padding: 0;
+
+    border: none;
+}
+  
+.slideIn {
+    transform: translateY(0);
+}
+  
+.slideOut {
+    transform: translateY(100vh);
+}
+
+.pfTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pftDesc h1 {
+    font-size: 2rem;
+    font-family: "Albert Sans", sans-serif;
+    color: #333232;
+    line-height: 38px;
+}
+
+.pftDesc p {
+    color: #333232;
+    font-size: 1rem;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+.pfInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pfInput .pfi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pfi label {
+    color: #333232;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pfi p {
+    color: #AEAAAB;
+    font-size: 0.7rem;
+    margin-left: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pfi input, .pfi textarea {
+    padding: 15px 10px;
+    outline: none;
+    margin-top: 5px;
+    border: 1px solid #D5D7DA;
+    border-radius: 10px;
+    width: 100%;
+    color: #AEAAAB;
+    font-family: "Oxygen", sans-serif;
+}
+
+.pfiIm {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.custom-date {
+    width: 100%;
+    padding: 15px 40px 15px 10px;
+    outline: none;
+    border: 1px solid #D5D7DA;
+    border-radius: 10px;
+    font-family: "Oxygen", sans-serif;
+    color: #AEAAAB;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+}
+
+.custom-calendar-icon {
+    position: absolute;
+    right: 10px;
+    /* width: 20px;
+    height: 20px; */
+    cursor: pointer;
+    pointer-events: auto; /* Ensure it’s clickable */
+}
+
+/* Make sure the calendar picker is visible */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block;
+    opacity: 0; /* Hide the icon but keep functionality */
+    position: absolute;
+    right: 10px;
+}
+
+
+.pfInput button{
+    background-image: linear-gradient(20deg,#FDB022, 20%, #FFCD71);
+    border: 1px solid #D5D7DA;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+    /* color: #333232; */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Oxygen", sans-serif;
+    margin-top: 10px;
+  }
+
+  
+  
+  .pfInput .ml{
+    font-size: 0.8rem;
+    color: #AEAAAB;
+    font-weight: 500;
+    font-family: "Oxygen", sans-serif;
+  }
+
+
+
+  .rvBtns button{
+    background-image: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333232;
+}

@@ -4,7 +4,7 @@ import Food from './Food';
 
 function MenuMain({ isSelected, selectedSecondaryCategory, handleFoodClick, handleFoodId, foodClick, foodId }) {
     const texts = {
-        food: "to eat? 🍇",
+        food: "to eat? 🍔",
         bar: "to drink? 🍹",
         drinks: "to sip? ☕"
     };

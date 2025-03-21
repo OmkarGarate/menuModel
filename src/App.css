@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 *{
   box-sizing: border-box;
@@ -62,7 +63,7 @@
 
 .allComponents{
   /* border: 1px solid black; */
-  height: 100vh;
+  min-height: 100vh;
   background-color: white;
   transition: all 0.4s ease-in-out;
 
@@ -84,3 +85,4 @@
   margin-top: 50px;
   padding: 20px;
 }
+

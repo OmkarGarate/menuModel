@@ -3,6 +3,7 @@ import "../css/food.css";
 import foodItems from "../data/foodData";
 import FoodCard from "./FoodCard";
 import FoodDetails from "./FoodDetails";
+import PersonaliseForm from "./PersonaliseForm";
 
 const generateCategoriesByTag = (items) => {
   const categories = {
@@ -81,8 +82,16 @@ function Food({ isSelected, selectedSecondaryCategory, handleFoodClick, handleFo
     }
   }, [selectedSecondaryCategory]);
 
+  const [pf, setPf] = useState(false)
+  useEffect(()=>{
+    setPf(true)
+  },[])
+  
   return (
     <div className="fnc">
+
+      
+      
       {/* Category Filter */}
       <div className="foodNav">
         {categories.map((cat) => (
@@ -123,6 +132,10 @@ function Food({ isSelected, selectedSecondaryCategory, handleFoodClick, handleFo
           <FoodDetails foodId={foodId} onClose={() => handleFoodClick(false)} />
         </div>
       )}
+
+
+
+
     </div>
   );
 }

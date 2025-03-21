@@ -1,5 +1,6 @@
 import React from "react";
 import foodImg from '../Images/chickenBowl.jpg';
+import viewBtn from '../Images/viewBtn.svg'
 
 function FoodCard({ item }) {
   // Define category colors
@@ -42,7 +43,7 @@ function FoodCard({ item }) {
         <h3>{item.name}</h3>
         <div className="pv">
           <p className="foodPrice">{item.price}</p>
-          <button className="viewButton">VIEW →</button>
+          <img src={viewBtn} alt="viewbtn" />
         </div>
       </div>
       <img src={foodImg} alt={item.name} />

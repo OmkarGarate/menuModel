@@ -2,9 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
 import MenuMain from './Components/MenuMain';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import closeBtn from './Images/closeBtn.svg';
-import foodItems from './data/foodData'; // Import foodItems data
+import foodItems from './data/foodData';
+import PersonaliseForm from './Components/PersonaliseForm'; // Import the PersonaliseForm component
+
+import reviewBtn from './Images/Review Button.svg'
+import ReviewUs from './Components/ReviewUs';
+import FeedbackForm from './Components/FeedbackForm';
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 426);
@@ -12,9 +17,13 @@ function App() {
   const [openMenu, setOpenMenu] = useState(false);
   const [selectedSecondaryCategory, setSelectedSecondaryCategory] = useState(null);
   const [viewMenu, setViewMenu] = useState(false);
-
+  const [showPersonaliseForm, setShowPersonaliseForm] = useState(true); // Show form on load
+  const [spl, setSpl] = useState(false)
   const [foodClick, setFoodClick] = useState(false);
   const [foodId, setFoodId] = useState("");
+
+  
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,9 +34,18 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+ 
   const handleFoodClick = (value) => {
     setFoodClick(value);
   };
+
+  const handleReviewClick = (value)=>{
+    setIsReview(value)
+  }
+
+  const handleFeedbackClick = (value)=>{
+    setIsFeed(value)
+  }
 
   const handleFoodId = (value) => {
     setFoodId(value);
@@ -36,6 +54,17 @@ function App() {
   const handleSelected = (menu) => {
     setIsSelected(menu);
   };
+
+  useEffect(()=>{
+    if(showPersonaliseForm){
+      setSpl(showPersonaliseForm)
+
+    }else{
+      setTimeout(() => {
+        setSpl(showPersonaliseForm)
+      }, 700);
+    }
+  },[showPersonaliseForm])
 
   const handleMenu = (value, category = null) => {
     setOpenMenu(value);
@@ -50,6 +79,15 @@ function App() {
     }
   };
 
+  const handlePfForm = (value) => {
+    if (!value) {
+      setTimeout(() => setShowPersonaliseForm(false), 300); // Delay hiding the background
+    } else {
+      setShowPersonaliseForm(true);
+    }
+  };
+  
+
   useEffect(() => {
     if (!openMenu) {
       setTimeout(() => setViewMenu(false), 400);
@@ -60,12 +98,23 @@ function App() {
 
   const secondaryCategories = [...new Set(foodItems.map((item) => item.secondaryCategory))];
 
+ 
+  const [isReview, setIsReview] = useState(false)
+  const [isFeed, setIsFeed] = useState(false)
+
   if (!isMobile) {
     return <div className="desktop-message">This website is available only on mobile devices.</div>;
   }
 
+
   return (
     <div className='backMenu'>
+      {spl && (
+        <div className={`pfForm ${showPersonaliseForm ? 'pfView' : 'pfFade'}`}>
+          <PersonaliseForm onClose={() => setShowPersonaliseForm(false)} showPersonaliseForm={showPersonaliseForm} handlePfForm={handlePfForm}/>
+        </div>
+      )}
+
       {viewMenu && (
         <div className='bm'>
           <button onClick={() => handleMenu(false)}>
@@ -96,6 +145,22 @@ function App() {
           foodClick={foodClick}
           foodId={foodId}
         />
+<img 
+  src={reviewBtn} 
+  alt="review button" 
+  className="reviewBtn" 
+  onClick={() => setIsReview(true)}
+/>
+        {isReview && (
+          <div className={`fd fdMain ${ isReview ? "active" : ""}`}>
+            <ReviewUs onClose={handleReviewClick} handleFeedbackClick={handleFeedbackClick}/>
+        </div>
+        )}
+        {isFeed && (
+          <div className={`fd fdMain ${ isFeed ? "active" : ""}`}>
+            <FeedbackForm onClose={handleFeedbackClick}/>
+        </div>
+        )}
       </div>
     </div>
   );

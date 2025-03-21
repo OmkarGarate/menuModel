@@ -19,6 +19,11 @@
    padding: 15px;
 }
 
+.rvm{
+    height: 70vh;
+    padding: 20px;
+}
+
 .fd.active {
     transform: translateY(0);
     opacity: 1;
@@ -233,3 +238,18 @@
     color: #333232;
     font-family: "Oxygen", sans-serif;
   }
+
+
+  .reviewBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+
+.reviewMain{
+    align-items: normal;
+    text-align: left;
+    
+}
