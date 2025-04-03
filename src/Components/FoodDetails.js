@@ -121,8 +121,8 @@ function FoodDetails({ foodId, onClose }) {
   return (
     <div 
       className={`fd ${isOpen ? "active" : ""}`}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
+      // onTouchStart={handleTouchStart}
+      // onTouchMove={handleTouchMove}
     >
       <button className="fd-close" onClick={handleClose}>
         <img src={closeBtn} alt="close button" />

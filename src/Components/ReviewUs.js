@@ -39,8 +39,8 @@ function ReviewUs({onClose, handleFeedbackClick}) {
     return (
         <div 
             className={`fd rvm ${isOpen ? "active" : ""}`} 
-            onTouchStart={handleTouchStart} 
-            onTouchMove={handleTouchMove}
+            // onTouchStart={handleTouchStart} 
+            // onTouchMove={handleTouchMove}
         >
             <button className="fd-close" onClick={handleClose}>
                 <img src={closeBtn} alt="close button" />

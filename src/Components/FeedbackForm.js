@@ -55,9 +55,9 @@ function FeedbackForm({ onClose }) {
     <div 
       className={`fd ${isOpen ? "active" : ""}`}
       ref={formRef}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
+      // onTouchStart={handleTouchStart}
+      // onTouchMove={handleTouchMove}
+      // onTouchEnd={handleTouchEnd}
     >
       <button className="fd-close" onClick={handleClose}>
         <img src={closeBtn} alt="close button" />
